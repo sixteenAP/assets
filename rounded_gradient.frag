@@ -16,5 +16,5 @@ void main() {
 	 vec2 coords = gl_TexCoord[0].st;
     vec2 centre = .5f * size;
     vec4 color = mix(mix(color1, color2, coords.y), mix(color3, color4, coords.y), coords.x);
-    gl_FragColor = vec4(color.rgb, color.a * (1.f- smoothstep(0.f, 1.5f, alpha(centre - (gl_TexCoord[0].st * size), centre - 1.f))));
+    gl_FragColor = vec4(color.rgb, color.a * (1.f- smoothstep(0.f, 0.f, alpha(centre - (gl_TexCoord[0].st * size), centre - 1.f))));
 }
